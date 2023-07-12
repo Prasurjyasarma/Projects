@@ -1,0 +1,187 @@
+ <article
+          class="main-article"
+          style="background-image: url(img/Soil.jpg)"
+        >
+            <div class="container">
+              </div>
+          </div> 
+        </article>
+
+
+
+.container {
+  height: 500px;
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("ocean fnl.jpg");
+  background-size: 100% 100%;
+  animation: slider 14s infinite linear;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 0 15px #e7e7e6;
+}
+@keyframes slider {
+  0% {
+    background-image: url("ocean fnl.jpg");
+  }
+  35% {
+    background-image: url("apo city.jpg");
+  }
+  75% {
+    background-image: url("ocean fnl.jpg");
+  }
+}
+
+
+WORKING
+ <section class="main-article"
+        style="background-image: url(img/Soil.jpg)">
+        <div>
+          <div class="container">
+        </div>
+      </section>
+
+
+<button class="btn btn--primary" onclick="location.href='https://instagram.com/prasurjya_sarma?igshid=MzRlODBiNWFlZA=='" formtarget="_blank"> Connect </button>
+
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+
+
+
+
+align-items: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+
+
+
+
+
+
+
+   <article
+          class="main-article"
+          style="background-image: url(img/Soil.jpg)"
+        >
+          <div class="row">
+            <div class="col">
+              <h2 class="pro">My projects</h2>
+            </div>
+            <div class="col">
+              <div class="card card1">
+                <h5></h5>
+              </div>
+
+              <div class="card card2">
+                <h5></h5>
+              </div>
+
+              <div class="card card3">
+                <h5></h5>
+              </div>
+
+              <div class="card card4">
+                <h5></h5>
+              </div>
+            </div>
+          </div>
+        </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CARD
+ <article
+          class="main-article"
+          style="background-image: url(img/Soil.jpg)"
+        >
+          <div class="rw">
+            <div>
+              <h2 class="pro">My projects</h2>
+            </div>
+            <div class="card-body">
+              <div class="card card1">
+                <h5>The Jerk</h5>
+              </div>
+
+              <div class="card card2">
+                <h5>The Jerk</h5>
+              </div>
+
+              <div class="card card3">
+                <h5>The Jerk</h5>
+              </div>
+
+              <div class="card card4">
+                <h5>The Jerk</h5>
+              </div>
+            </div>
+          </div>
+        </article>
+
+.card {
+  width: 200px;
+  height: 290px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-image: url("A.jpg");
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s;
+  border-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.card1 {
+  background-image: url("Best.jpg");
+}
+.card2 {
+  background-image: url("Pee.jpg");
+}
+.card3 {
+  background-image: url("The Dawn.jpg");
+}
+.card4 {
+  background-image: url("The jerk.jpg");
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+
+
+ <div class="services">
+          <h1>My Services</h1>
+          <div class="sen">
+  
+        </div>
