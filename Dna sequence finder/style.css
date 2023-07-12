@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  color: white;
+  background-color: #111010;
+  min-height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  padding: 20px;
+  font-size: 3.5rem;
+}
+#resultContainer {
+  padding-top: 2px;
+}
+.card {
+  font-weight: 600;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.178);
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.5s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.DnaSeq,
+.Seqfind {
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(172, 170, 170, 0.329);
+  color: white;
+  padding: 10px;
+  margin: 10px 170px 20px 20px;
+  font-size: 1rem;
+  width: 40%;
+  transition: 0.5s;
+}
+.Seqfind:hover {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.788);
+}
+.DnaSeq:hover {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.788);
+}
+label {
+  display: inline-block;
+  margin: 10px;
+  width: 200px;
+  font-size: 1.2rem;
+  text-align: right;
+}
+button {
+  background-color: rgba(121, 231, 140, 0.425);
+  border-radius: 8px;
+  border-width: 0;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  transition: all 200ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+button:hover {
+  transform: translateY(-3px);
+}
+span {
+  color: brown;
+}
+.totalel {
+  margin: 20px;
+  font-size: 2rem;
+}
+p {
+  padding: 30px;
+  font-size: 2rem;
+}
+@media (max-width: 500px) {
+  .DnaSeq,
+  .Seqfind {
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(172, 170, 170, 0.329);
+    color: rgb(8, 8, 8);
+    padding: 10px 100px;
+    margin: 5px 10px 5px 10px;
+    font-size: 1rem;
+    width: 40%;
+    transition: 0.5s;
+    align-items: center;
+  }
+  label {
+    display: inline-block;
+    margin: 10px;
+    width: 200px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  h1 {
+    padding: 30px;
+    margin-bottom: 20px;
+    font-size: 3.5rem;
+    line-height: 60px;
+  }
+  button {
+    background-color: rgba(121, 231, 140, 0.425);
+    border-radius: 8px;
+    border-width: 0;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+      sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin: 10px;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  button:hover {
+    transform: translateY(-3px);
+  }
+}
