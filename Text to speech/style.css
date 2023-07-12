@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+.herosec {
+  width: 100%;
+  height: 100vh;
+  background: #1d976c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #93f9b9,
+    #1d976c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #93f9b9,
+    #1d976c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+h2 {
+  letter-spacing: 2px;
+  font-size: 4rem;
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
+textarea {
+  width: 600px;
+  height: 250px;
+  color: black;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.274);
+  border: 0;
+  outline: 0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  resize: none;
+}
+textarea::placeholder {
+  color: rgb(24, 21, 21);
+}
+.row {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+button {
+  font-size: 20px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+button:hover {
+  background-color: brown;
+  color: white;
+}
+select {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.274);
+  color: rgb(24, 21, 21);
+  height: 50px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 10px;
+  appearance: none;
+  background-image: url(down-arrow.png);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 20px);
+  background-position-y: 15px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+select:hover {
+  transform: scale(1.1);
+}
+#volumeSlider {
+  position: absolute;
+  bottom: 5%;
+  width: 30%;
+  height: 50px;
+  transition: 0.5s;
+  border: 2px solid black;
+  cursor: pointer;
+}
+h3 {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 5.5%;
+  left: 32%;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
+}
