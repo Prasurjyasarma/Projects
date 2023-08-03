@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylegal.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Gallery</title>
+  </head>
+  <body>
+    <h3 class="buttonBk">
+      <a><i class="fa fa-angle-double-left"></i></a>
+    </h3>
+    <h1>Gallery</h1>
+
+    <div class="gallery-wrapper">
+      <div class="gallery-container">
+        <div class="gallery-images">
+          <div
+            class="gallery-image-wrapper"
+            onclick="openFullscreenImage('img/1311991.jpeg')"
+          >
+            <img src="img/1311991.jpeg" alt="Image 1" class="gallery-image" />
+          </div>
+
+          <div
+            class="gallery-image-wrapper"
+            onclick="openFullscreenImage('img/3840x2160-spiderman-miles-lost-in-space-4k_1553071367.jpg')"
+          >
+            <img
+              src="img/3840x2160-spiderman-miles-lost-in-space-4k_1553071367.jpg"
+              alt="Image 2"
+              class="gallery-image"
+            />
+          </div>
+          <div
+            class="gallery-image-wrapper"
+            onclick="openFullscreenImage('img/1313972.jpeg')"
+          >
+            <img src="img/1313972.jpeg" alt="Image 3" class="gallery-image" />
+          </div>
+
+          <div
+            class="gallery-image-wrapper"
+            onclick="openFullscreenImage('img/1311991.jpeg')"
+          >
+            <img src="img/1311991.jpeg" alt="Image 1" class="gallery-image" />
+          </div>
+
+          <div
+            class="gallery-image-wrapper"
+            onclick="openFullscreenImage('img/3840x2160-spiderman-miles-lost-in-space-4k_1553071367.jpg')"
+          >
+            <img
+              src="img/3840x2160-spiderman-miles-lost-in-space-4k_1553071367.jpg"
+              alt="Image 2"
+              class="gallery-image"
+            />
+          </div>
+
+          <div
+            class="gallery-image-wrapper"
+            onclick="openFullscreenImage('img/1313972.jpeg')"
+          >
+            <img src="img/1313972.jpeg" alt="Image 3" class="gallery-image" />
+          </div>
+          <div
+            class="gallery-image-wrapper"
+            onclick="openFullscreenImage('img/1311991.jpeg')"
+          >
+            <img src="img/1311991.jpeg" alt="Image 1" class="gallery-image" />
+          </div>
+
+          <div
+            class="gallery-image-wrapper"
+            onclick="openFullscreenImage('img/3840x2160-spiderman-miles-lost-in-space-4k_1553071367.jpg')"
+          >
+            <img
+              src="img/3840x2160-spiderman-miles-lost-in-space-4k_1553071367.jpg"
+              alt="Image 2"
+              class="gallery-image"
+            />
+          </div>
+
+          <div
+            class="gallery-image-wrapper"
+            onclick="openFullscreenImage('img/1313972.jpeg')"
+          >
+            <img src="img/1313972.jpeg" alt="Image 3" class="gallery-image" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full screen-->
+    <div
+      class="fullscreen-overlay"
+      id="fullscreen-overlay"
+      onclick="closeFullscreenImage()"
+    >
+      <img
+        src=""
+        alt="Fullscreen Image"
+        class="fullscreen-image"
+        id="fullscreenImage"
+      />
+      <span class="close-button" onclick="closeFullscreenImage()">&times;</span>
+    </div>
+    <div class="animated-page-transition"></div>
+    <script src="app2.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

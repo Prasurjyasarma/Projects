@@ -1,0 +1,442 @@
+:root {
+  /* z-indexes */
+  --hero-z-index: 2;
+  --trailer-z-index: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "-apple-system", BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#perloader {
+  user-select: none;
+  background: #000 url(img/Preloader2.gif) no-repeat center;
+  background-size: 30%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+.hero {
+  height: calc(100vh + 2px);
+  width: calc(100% + 2px);
+  position: fixed;
+  z-index: var(--hero-z-index);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.hero__top {
+  width: 100%;
+  height: 60%;
+  min-height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.hero__bottom {
+  width: 100%;
+  background: #fff;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: center;
+}
+.hero__top .filler {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.filler-white {
+  background-color: #fff;
+}
+.hero__illustration {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.hero__illustration .filler:first-child {
+  padding-top: 200px;
+}
+.hero-icon {
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  margin: 0 auto;
+  -webkit-clip-path: polygon(
+    0 0,
+    50% 50%,
+    100.5% 0,
+    100.5% 100%,
+    50% 50%,
+    0 100%
+  );
+  clip-path: polygon(0 0, 50% 50%, 100.5% 0, 100.5% 100%, 50% 50%, 0 100%);
+}
+
+.hero h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 120px;
+  margin: 0;
+  opacity: 1;
+}
+
+.trailer {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: var(--trailer-z-index);
+  background-color: #000;
+}
+.video-wrapper {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+}
+.video {
+  height: 100vh;
+  width: 100vw;
+  animation: backgroundsss 3s infinite;
+}
+@keyframes backgroundsss {
+  0% {
+    background: url(https://media4.giphy.com/media/tCurAfRDKXhfO/giphy.gif?cid=ecf05e47ts3mtiq74jvhzrsx68sp54vk1nof1joq7cjnoook&ep=v1_gifs_related&rid=giphy.gif&ct=g)
+      center center fixed;
+  }
+  50% {
+    background: url(https://media2.giphy.com/media/126QLz1ff3CmGs/giphy.gif?cid=ecf05e47smhf2qctzdllcqtev09otj4qmswo7enk0lwcdyb2&ep=v1_gifs_related&rid=giphy.gif&ct=g)
+      center center fixed;
+  }
+  100% {
+    background: url(https://media1.giphy.com/media/kyDa3Vf5VHFew/giphy.gif?cid=ecf05e4742f6hpx9q95vnn3kkf7ka5nt45giv6467hph6mun&ep=v1_gifs_related&rid=giphy.gif&ct=g)
+      center center fixed;
+  }
+}
+.past-threshold .trailer {
+  position: absolute;
+  height: 200vh;
+}
+.past-threshold .video-wrapper {
+  margin-top: 100vh;
+}
+
+.content {
+  /* pushs content below header hero & trailer (should equal trailer height after threshold) */
+  padding-top: 200vh;
+}
+.section {
+  overflow: hidden;
+  background: white;
+  background-size: cover;
+  height: 75vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-weight: bolder;
+}
+.section h2 {
+  margin: 10px 0 5px;
+  padding-bottom: -1px;
+}
+.section p {
+  font-size: 1.3rem;
+  margin-top: 1px;
+  text-align: center;
+  width: 700px;
+  padding-bottom: 60px;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+}
+.section:nth-child(2n) {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+}
+.section h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 100px;
+}
+
+.card-container {
+  display: flex;
+  overflow: hidden; /* Hide overflow to prevent multiple cards from showing at once */
+  transition: transform 0.3s ease; /* Add smooth transition when changing cards */
+}
+
+/* Styles for each card */
+.card {
+  flex: 0 0 50%;
+  border-radius: 20px;
+  background-color: #735cf3;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: none; /* Hide all cards initially */
+}
+
+/* Style for active card */
+.card.active {
+  display: block; /* Show active card */
+}
+
+/* Styles for h3 in the card */
+.card h3 {
+  text-align: center;
+  font-size: 24px;
+}
+
+/* Styles for p in the card */
+.card p {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding-bottom: 0px;
+  font-weight: lighter;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#nextButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 6px;
+  color: #000000;
+  background: #fff;
+  border: none;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  z-index: 999;
+  transition: 0.6s;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+#nextButton:hover {
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px #735cf3;
+  outline: 0;
+}
+#nextButton:focus {
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px #735cf3;
+  outline: 0;
+}
+
+.card23 {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  width: 300px;
+  height: 200px;
+  border: none;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  animation: slideBackground 15s infinite;
+  background-size: cover;
+}
+@keyframes slideBackground {
+  0%,
+  100% {
+    background-image: url(img/1311991.jpeg);
+    background-position: 0 0;
+  }
+  33.33% {
+    background-image: url(img/3840x2160-spiderman-miles-lost-in-space-4k_1553071367.jpg);
+    background-position: 100% 0;
+  }
+  66.66% {
+    background-image: url(img/1311991.jpeg);
+    background-position: 100% 0;
+  }
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.button-4 {
+  z-index: 9999;
+  appearance: none;
+  background-color: #fafbfc;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+  transition: 0.5s;
+}
+
+.button-4:hover {
+  text-decoration: none;
+  transition-duration: 0.1s;
+  transform: translateY(-5px);
+}
+
+.button-4:disabled {
+  background-color: #fafbfc;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959da5;
+  cursor: default;
+}
+
+.button-4:active {
+  background-color: #edeff2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.button-4:focus {
+  outline: 1px transparent;
+}
+
+.button-4:before {
+  display: none;
+}
+
+.button-4:-webkit-details-marker {
+  display: none;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+ul li {
+  padding: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 999;
+  transition: 0.5s;
+}
+ul li:hover {
+  transform: translateY(-5px);
+  color: #735cf3;
+}
+
+/* page transition */
+.animated-page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  z-index: 9999;
+  pointer-events: none; /* Disable interactions while hidden */
+}
+
+.animated-page-transition.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0%);
+  pointer-events: auto; /* Enable interactions when active */
+}
+
+@media (max-width: 1000px) {
+  .hero h1 {
+    font-size: 90px;
+    font-weight: none;
+  }
+}
+@media (max-width: 760px) {
+  .hero h1 {
+    font-size: 60px;
+    font-weight: none;
+  }
+  .section p {
+    text-align: center;
+    width: 400px;
+  }
+
+  .video {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+  }
+  .card {
+    flex: 0 0 50%;
+    background-color: #735cf3;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: none; /* Hide all cards initially */
+  }
+}
+@media (max-width: 510px) {
+  .hero h1 {
+    font-size: 90px;
+    font-weight: none;
+  }
+  .section p {
+    text-align: center;
+    width: 350px;
+    font-size: 1.2rem;
+  }
+
+  .video {
+    height: 100%;
+    width: 100;
+    background-size: cover;
+  }
+  .card {
+    flex: 0 0 50%;
+    background-color: #735cf3;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: none; /* Hide all cards initially */
+  }
+}

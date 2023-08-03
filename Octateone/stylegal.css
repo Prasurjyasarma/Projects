@@ -1,0 +1,203 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  background: url(img/White-Background-Aesthetic-Backgrounds-Cloud-White.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 120px;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+}
+h3 {
+  text-align: left;
+  transition: 0.5s;
+}
+a {
+  cursor: pointer;
+  text-align: left;
+  font-size: 40px;
+  padding-left: 20px;
+  text-decoration: none;
+}
+h3:hover {
+  transform: translateY(-9px);
+}
+.gallery-wrapper {
+  display: flex;
+  justify-content: center; /* Center the gallery container horizontally */
+  align-items: center;
+  height: 80%;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping of images to create horizontal scroll */
+  justify-content: flex-start; /* Align images to the start of the container */
+  align-items: center;
+  overflow-x: auto; /* Enable horizontal scroll */
+  perspective: 1000px;
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+.gallery-images {
+  display: flex;
+  animation: galleryLoop 50s linear infinite;
+  animation-play-state: running;
+}
+
+.gallery-image {
+  max-width: 500px;
+  max-height: 500px;
+  margin: 10px;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: pointer;
+  filter: grayscale(100);
+  transition: transform 0.5s ease;
+  transition: 0.8s;
+}
+@keyframes galleryLoop {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-70%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.gallery-image:hover {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  transform: translateY(-10px);
+  filter: grayscale(0);
+}
+
+.gallery-container {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.gallery-container::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar and sidebar on Chrome and Safari */
+}
+
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay color */
+  z-index: 9999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.animated-page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000; /* Change the background color as desired */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  z-index: 9999;
+  pointer-events: none; /* Disable interactions while hidden */
+}
+
+.animated-page-transition.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0%);
+  pointer-events: auto; /* Enable interactions when active */
+}
+
+@media (max-width: 510px) {
+  .gallery-wrapper {
+    display: flex;
+    justify-content: center; /* Center the gallery container horizontally */
+    align-items: center;
+    height: 70%;
+  }
+  .gallery-images {
+    display: flex;
+    animation: galleryLoop 60s linear infinite;
+    animation-play-state: running;
+  }
+  @keyframes galleryLoop {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-30%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+@media (max-width: 760px) {
+  .gallery-wrapper {
+    display: flex;
+    justify-content: center; /* Center the gallery container horizontally */
+    align-items: center;
+    height: 70%;
+  }
+  .gallery-images {
+    display: flex;
+    animation: galleryLoop 60s linear infinite;
+    animation-play-state: running;
+  }
+  @keyframes galleryLoop {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-30%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 100px;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+  }
+}
