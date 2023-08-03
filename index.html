@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handjet:wght@300&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <section id="header">
+      <a href="#" class="logo"><span>Game</span>Mania</a>
+      <nav>
+        <ul id="navbar">
+          <li><a href="#">home</a></li>
+          <li><a href="Shop/shop.html">shop</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <li>
+            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+          <li>
+            <a href="profile.html"><i class="fa-solid fa-user"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <section id="hero">
+      <img src="Img/hero-banner.png" alt="Hero banner" />
+      <h4 data-aos="fade-in" data-aos-duration="1000">Best place for</h4>
+      <h2 data-aos="fade-in" data-aos-duration="1000">Pc/Xbox/PS4/PS5</h2>
+      <h1 data-aos="fade-in" data-aos-duration="100">
+        Games of the <span>globe</span>
+      </h1>
+      <p data-aos="fade-in" data-aos-duration="1000">
+        save up 70% off and all games!
+      </p>
+      <button data-aos="fade-in" data-aos-duration="1000">
+        <a href="#product1">Explore</a>
+      </button>
+    </section>
+
+    <section id="feature" class="section-p1" data-aos="fade-in">
+      <div class="feat-box">
+        <img src="Img/Features/f1.png" alt="Feature 1" />
+        <h6>Free shipping</h6>
+      </div>
+      <div class="feat-box">
+        <img src="Img/Features/f2.png" alt="Feature 1" />
+        <h6>Online order</h6>
+      </div>
+      <div class="feat-box">
+        <img src="Img/Features/f3.png" alt="Feature 1" />
+        <h6>Save money</h6>
+      </div>
+      <div class="feat-box">
+        <img src="Img/Features/f4.png" alt="Feature 1" />
+        <h6>Promotion</h6>
+      </div>
+      <div class="feat-box">
+        <img src="Img/Features/f5.png" alt="Feature 1" />
+        <h6>Happy sell</h6>
+      </div>
+      <div class="feat-box">
+        <img src="Img/Features/f6.png" alt="Feature 1" />
+        <h6>24/7 support</h6>
+      </div>
+    </section>
+
+    <section id="product1" class="section-p1">
+      <h2>Featured Products</h2>
+      <p>Summer sale best games</p>
+      <div class="pro-container" data-aos="fade-in"></div>
+    </section>
+
+    <section id="banner" class="section-m1">
+      <h4>Coaching services</h4>
+      <h2>Up to <span>50%</span> - All coaching services</h2>
+      <button>Learn more</button>
+    </section>
+
+    <section id="sm-banner">
+      <div class="banner-box" id="banner-box1" data-aos="fade-in">
+        <h5>Metrovelina</h5>
+        <h4>best deals</h4>
+        <h2>up to 70% off</h2>
+      </div>
+      <div class="banner-box2" id="banner-box2" data-aos="fade-in">
+        <h5>Open world</h5>
+        <h4>best deals</h4>
+        <h2>up to 80% off</h2>
+      </div>
+      <div class="banner-box3" id="banner-box3" data-aos="fade-in">
+        <h5>Racing</h5>
+        <h4>best deals</h4>
+        <h2>up to 50% off</h2>
+      </div>
+      <div class="banner-box4" id="banner-box4" data-aos="fade-in">
+        <h5>RPG</h5>
+        <h4>best deals</h4>
+        <h2>up to 60% off</h2>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+      });
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
